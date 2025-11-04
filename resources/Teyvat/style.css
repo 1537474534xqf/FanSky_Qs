@@ -36,14 +36,14 @@
 
 @font-face {
     font-family: "PanelFont";
-    src: url(../fonts/HYWH-65W.ttf);
+    src: url(../fonts/FZB.woff);
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: "PanelNumFont";
-    src: url(../fonts/tttgbnumber.ttf);
+    src: url(../fonts/FZB.woff);
     font-weight: 400;
     font-style: normal
 }
@@ -69,6 +69,7 @@ div.TopLeftPanel {
     left: 20px;
     width: 325px;
     height: 543px;
+    
 }
 
 div.TopLeftPanel > div.UID {
@@ -80,13 +81,15 @@ div.TopLeftPanel > div.UID {
     width: 300px;
     height: 30px;
     line-height: 30px;
-    text-shadow: 0 0 3px #d3bc8e, 2px 2px 4px rgb(0 0 0 / 70%);
-    color: rgba(235, 205, 124, 0.82);
+    text-shadow: 0 0 3px #000, 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 div.TopLeftPanel > div.UID::before {
     content: "#队伍伤害 UID";
+    color: #ffffff;
+    text-shadow: 0 0 3px #000, 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 div.TopLeftPanel > div.rank {
@@ -99,20 +102,22 @@ div.TopLeftPanel > div.rank {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: #2532004d;
+    background-color: #1921024d;
 }
 
 div.TopLeftPanel > div.rank > div {
     width: 60%;
-    height: 91px;
+    height: 85px;
     font-family: "PanelNumFont";
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     color: #03f7eceb;
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #1921024d;
 }
 
 div.TopLeftPanel > div.rank > div:nth-child(odd) {
@@ -128,7 +133,7 @@ div.TopLeftPanel > div.rank > div::after {
 
 div.TopLeftPanel > div.rank > div.dps::after {
     content: "DPS";
-    font-style: italic;
+    font-style: normal;
 }
 
 div.TopLeftPanel > div.rank > div.time::after {
@@ -563,7 +568,7 @@ ul.Buffs {
     background-color: #332e3ed6;;
     box-shadow: 0px 15px 15px rgb(0 0 0 / 40%);
     position: relative;
-    top: 15px;
+    top: 35px;
     left: 20px;
     display: flex;
     flex-direction: column;
@@ -603,7 +608,7 @@ div.Actions > div.title::before {
 }
 
 div.Actions > div.title::after {
-    content: "默认手法可能并非最优，如需自定义操作手法请使用微信小程序";
+    content: "当前手法为默认手法，可能并非最优解，如需自定义操作手法请使用提瓦特小助手";
 }
 
 div.Actions > div.act {
@@ -633,7 +638,7 @@ div.Actions > div.act > div {
 
 ul.Damages > li,
 ul.Buffs > li {
-    color: rgb(214 113 211);
+    color: rgb(255, 190, 253);
     height: auto;
     min-height: 40px;
     padding-left: 25px;
@@ -738,13 +743,13 @@ ul.Buffs > li:not(.title) > div:nth-child(2) {
 }
 
 div.copyright {
-    color: #c4d5cc;
+    color: #fff;
     opacity: 0.95;
-    text-shadow: 3px 5px 4px #333333ad;
+    text-shadow: 0 0 3px #000, 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-size: 25px;
     width: 960px;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     font-weight: bold;
 }
